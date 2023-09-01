@@ -22,7 +22,7 @@ document.getElementById("itemsForm").addEventListener("submit", async function(e
     console.log(JSON.stringify(dataToSend));
 
     try {
-        const response = await fetch(apiUrl+'items/add', {
+        const response = await fetch(apiUrl+'/items/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
