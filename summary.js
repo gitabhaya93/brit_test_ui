@@ -1,6 +1,7 @@
+const apiUrl =  "https://itemapp.azurewebsites.net/";
 document.addEventListener("DOMContentLoaded", async function() {
     try {
-        const response = await fetch('http://localhost:8000/items/summary');
+        const response = await fetch(apiUrl+'/items/summary');
         if (response.ok) {
             const summaryData = await response.json();
             const totalCostValue = document.getElementById("totalCost");
