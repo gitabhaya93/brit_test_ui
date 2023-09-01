@@ -1,3 +1,4 @@
+const apiUrl =  "https://itemapp.azurewebsites.net/";
 document.getElementById("itemsForm").addEventListener("submit", async function(event) {
     event.preventDefault();
     const itemName = document.getElementById("itemName").value;
@@ -21,7 +22,7 @@ document.getElementById("itemsForm").addEventListener("submit", async function(e
     console.log(JSON.stringify(dataToSend));
 
     try {
-        const response = await fetch('http://localhost:8000/items/add', {
+        const response = await fetch(apiUrl+'items/add', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,7 +44,7 @@ document.getElementById("itemsForm").addEventListener("submit", async function(e
 
 document.addEventListener("DOMContentLoaded", async function() {
     try {
-        const response = await fetch('http://localhost:8000/items/list');
+        const response = await fetch(apiUrl+'/items/list');
         if (response.ok) {
             const items = await response.json();
             const itemsTableBody = document.getElementById("itemsTableBody");
@@ -66,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async function() {
 
 document.addEventListener("DOMContentLoaded", async function() {
     try {
-        const response = await fetch('http://localhost:8000/items/summary');
+        const response = await fetch(apiUrl+'/items/summary');
         if (response.ok) {
             const items = await response.json();
             const itemsTableBody = document.getElementById("itemsTableBody");
