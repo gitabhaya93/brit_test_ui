@@ -1,4 +1,4 @@
-const apiUrl =  "https://itemapp.azurewebsites.net/";
+const apiUrl =  "https://itemapp.azurewebsites.net";
 document.addEventListener("DOMContentLoaded", async function() {
     try {
         const response = await fetch(apiUrl+'/items/summary');
