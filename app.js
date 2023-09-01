@@ -1,4 +1,4 @@
-const apiUrl =  "https://itemapp.azurewebsites.net/";
+const apiUrl =  "https://itemapp.azurewebsites.net";
 document.getElementById("itemsForm").addEventListener("submit", async function(event) {
     event.preventDefault();
     const itemName = document.getElementById("itemName").value;
